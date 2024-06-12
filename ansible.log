@@ -3327,3 +3327,110 @@ The offending line appears to be:
 2024-06-11 01:22:32,158 p=11811 u=ec2-user n=ansible | ok: [172.31.40.104]
 2024-06-11 01:22:32,170 p=11811 u=ec2-user n=ansible | PLAY RECAP *********************************************************************
 2024-06-11 01:22:32,171 p=11811 u=ec2-user n=ansible | 172.31.40.104              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-12 15:25:37,108 p=3429 u=ec2-user n=ansible | Encryption successful
+2024-06-12 15:26:52,046 p=3609 u=ec2-user n=ansible | [WARNING]:  * Failed to parse /home/ec2-user/ansible-dev/inv.yml with auto plugin: Attempting to
+decrypt but no vault secrets found
+
+2024-06-12 15:26:52,047 p=3609 u=ec2-user n=ansible | [WARNING]:  * Failed to parse /home/ec2-user/ansible-dev/inv.yml with yaml plugin: Attempting to
+decrypt but no vault secrets found
+
+2024-06-12 15:26:52,047 p=3609 u=ec2-user n=ansible | [WARNING]:  * Failed to parse /home/ec2-user/ansible-dev/inv.yml with ini plugin: Attempting to
+decrypt but no vault secrets found
+
+2024-06-12 15:26:52,048 p=3609 u=ec2-user n=ansible | [WARNING]: Unable to parse /home/ec2-user/ansible-dev/inv.yml as an inventory source
+
+2024-06-12 15:26:52,048 p=3609 u=ec2-user n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-06-12 15:28:01,470 p=3961 u=ec2-user n=ansible | 172.31.21.224 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: no such identity: /home/ec2-user/ansible-key.pemc: No such file or directory\r\nPermission denied (publickey).",
+    "unreachable": true
+}
+2024-06-12 15:28:05,984 p=3961 u=ec2-user n=ansible | 172.31.40.104 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-06-12 15:28:58,799 p=4134 u=ec2-user n=ansible | 172.31.21.224 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: no such identity: /home/ec2-user/ansible-key.pemc: No such file or directory\r\nPermission denied (publickey).",
+    "unreachable": true
+}
+2024-06-12 15:28:59,323 p=4134 u=ec2-user n=ansible | 172.31.40.104 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-06-12 15:31:13,241 p=5661 u=ec2-user n=ansible | 172.31.21.224 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: no such identity: /home/ec2-user/ansible-key.pemc: No such file or directory\r\nPermission denied (publickey).",
+    "unreachable": true
+}
+2024-06-12 15:31:17,330 p=5661 u=ec2-user n=ansible | 172.31.40.104 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-06-12 15:33:28,614 p=6009 u=ec2-user n=ansible | Decryption successful
+2024-06-12 15:34:03,272 p=6155 u=ec2-user n=ansible | Encryption successful
+2024-06-12 15:34:20,589 p=6330 u=ec2-user n=ansible | 172.31.40.104 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-06-12 15:34:20,786 p=6330 u=ec2-user n=ansible | 172.31.21.224 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-06-12 15:34:28,613 p=6483 u=ec2-user n=ansible | Decryption successful
+2024-06-12 15:34:55,580 p=6605 u=ec2-user n=ansible | Encryption successful
+2024-06-12 15:36:30,207 p=7056 u=ec2-user n=ansible | ERROR! Decryption failed (no vault secrets were found that could decrypt) for /home/ec2-user/ansible-dev/inv.yml
+2024-06-12 15:37:15,004 p=7219 u=ec2-user n=ansible | Rekey successful
+2024-06-12 15:38:56,958 p=7379 u=ec2-user n=ansible | Decryption successful
+2024-06-12 15:54:07,818 p=9287 u=ec2-user n=ansible | PLAY [ws] *******************************************************************************************
+2024-06-12 15:54:07,841 p=9287 u=ec2-user n=ansible | TASK [Gathering Facts] ******************************************************************************
+2024-06-12 15:54:12,049 p=9287 u=ec2-user n=ansible | ok: [172.31.40.104]
+2024-06-12 15:54:12,064 p=9287 u=ec2-user n=ansible | TASK [Package Install] ******************************************************************************
+2024-06-12 15:54:14,808 p=9287 u=ec2-user n=ansible | ok: [172.31.40.104]
+2024-06-12 15:54:14,824 p=9287 u=ec2-user n=ansible | PLAY RECAP ******************************************************************************************
+2024-06-12 15:54:14,824 p=9287 u=ec2-user n=ansible | 172.31.40.104              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-12 16:35:19,758 p=10561 u=ec2-user n=ansible | 172.31.33.238 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Data could not be sent to remote host \"172.31.33.238\". Make sure this host can be reached over ssh: ssh: connect to host 172.31.33.238 port 22: Connection timed out\r\n",
+    "unreachable": true
+}
+2024-06-12 16:37:10,662 p=10675 u=ec2-user n=ansible | 172.31.33.238 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2024-06-12 16:55:08,887 p=11101 u=ec2-user n=ansible | PLAY [wind] *****************************************************************************************
+2024-06-12 16:55:08,897 p=11101 u=ec2-user n=ansible | TASK [Gathering Facts] ******************************************************************************
+2024-06-12 16:55:15,958 p=11101 u=ec2-user n=ansible | ok: [172.31.33.238]
+2024-06-12 16:55:15,969 p=11101 u=ec2-user n=ansible | TASK [Create a file] ********************************************************************************
+2024-06-12 16:55:18,245 p=11101 u=ec2-user n=ansible | changed: [172.31.33.238]
+2024-06-12 16:55:18,249 p=11101 u=ec2-user n=ansible | TASK [download file online] *************************************************************************
+2024-06-12 16:55:36,021 p=11101 u=ec2-user n=ansible | changed: [172.31.33.238]
+2024-06-12 16:55:36,031 p=11101 u=ec2-user n=ansible | PLAY RECAP ******************************************************************************************
+2024-06-12 16:55:36,032 p=11101 u=ec2-user n=ansible | 172.31.33.238              : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-12 17:05:56,596 p=11523 u=ec2-user n=ansible | PLAY [wind] *****************************************************************************************
+2024-06-12 17:05:56,607 p=11523 u=ec2-user n=ansible | TASK [Gathering Facts] ******************************************************************************
+2024-06-12 17:06:05,541 p=11523 u=ec2-user n=ansible | ok: [172.31.33.238]
+2024-06-12 17:06:05,549 p=11523 u=ec2-user n=ansible | TASK [Create a file] ********************************************************************************
+2024-06-12 17:06:07,727 p=11523 u=ec2-user n=ansible | ok: [172.31.33.238]
+2024-06-12 17:06:07,733 p=11523 u=ec2-user n=ansible | TASK [download file online] *************************************************************************
+2024-06-12 17:06:21,902 p=11523 u=ec2-user n=ansible | ok: [172.31.33.238]
+2024-06-12 17:06:21,937 p=11523 u=ec2-user n=ansible | TASK [Update all package] ***************************************************************************
+2024-06-12 17:36:17,080 p=11523 u=ec2-user n=ansible | changed: [172.31.33.238]
+2024-06-12 17:36:17,096 p=11523 u=ec2-user n=ansible | PLAY RECAP ******************************************************************************************
+2024-06-12 17:36:17,096 p=11523 u=ec2-user n=ansible | 172.31.33.238              : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
