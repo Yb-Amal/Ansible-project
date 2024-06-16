@@ -9,8 +9,8 @@ pipeline {
                     sh 'ansible-playbook qa.yml'
                 }
             }
-        }/* 
-        stage('Deploy application') {
+        }
+        /* stage('Deploy application') {
             steps {
                 dir('/home/ec2-user/pqa-stuff') {
                     sh 'ansible-playbook javaapp.yml'
