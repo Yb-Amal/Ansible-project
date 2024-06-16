@@ -6,7 +6,7 @@ pipeline {
         stage('Patching servers') {
             steps {
                 dir('/home/ec2-user/ansible-dev/Ansible-project') {
-                    sh 'ansible-playbook qa.yml'
+                    sh 'ansible-playbook qa456.yml'
                 }
             }
         }
