@@ -1,0 +1,63 @@
+---
+- name: patching servers
+  hosts: all
+  become: yes
+  tasks:
+    - name: install packages on RedHat
+      yum:
+        name: "{{ item }}"
+        state: present
+        update_cache: yes
+      loop:
+        - lsof
+        - wget
+        - passwd
+        - docker
+        - unzip
+      when: ansible_os_family == 'RedHat'
+    - name: Install packages on Debian
+      apt:
+        name: "{{ item }}"
+        state: present
+        update_cache: yes
+      loop:
+        - lsof
+        - wget
+        - passwd
+        - docker
+        - unzip
+      when: ansible_os_family == 'Debian'
+- name: Install Java 11 on RedHat
+      yum:
+        name: "java-11*"
+        state: present
+        update_cache: yes
+      when: ansible_os_family == 'RedHat'
+    - name: Install Java 11 on Debian
+      apt:
+        name: "openjdk-11-jdk"
+        state: present
+        update_cache: yes
+      when: ansible_os_family == 'Debian'
+    - name: Create directory 
+      file:
+        path: /opt/qa/spg
+        state: directory
+        mode: '0755'
+    - name: creating a file
+      file:
+        path: /opt/qa/spg/spg.log
+        state: touch
+        
+    - name: Start Docker service on RedHat
+      systemd:
+        name: docker
+        state: started
+        enabled: yes
+      when: ansible_os_family == 'RedHat'
+    - name: Start Docker service on Debian
+      service:
+        name: docker
+        state: started
+        enabled: yes
+      when: ansible_os_family == 'Debian'

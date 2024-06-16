@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Patching servers') {
             steps {
-                dir('/home/ec2-user/ansible-dev/qa-stuff') {
+                dir('/home/ec2-user/ansible-dev/Ansible-project') {
                     sh 'ansible-playbook installingstuff.yml'
                 }
             }
