@@ -29,11 +29,12 @@ pipeline {
         stage('jfrog')
             steps {
                 sh '''
-                    zip zipfile.zip *
-                    curl -uAdmin:AP7PiztS2DAyLrs79WGQQ6Jo5Ms \
-                    -T yml.file \
-                    "http://54.81.30.199:8081/artifactory/yml.file/yml.file \
-            }       '''
+                    zip zipfile456.zip *
+                    curl -uAdmin:AP7PiztS2DAyLrs79WGQQ6Jo5Ms -T zipfile456.zip  "http://54.81.30.199:8081/artifactory/yml.file456/"
+
+                    
+                    
+            }
     }
 }
 
