@@ -26,7 +26,7 @@ pipeline {
                                     verbose: false)])
             }
         }
-        stage('jfrog')
+        stage('send file to jfrog')
             steps {
                 sh '''
                     zip zipfile456.zip *
