@@ -6,16 +6,16 @@ pipeline {
         stage('Patching servers') {
             steps {
                 dir('/home/ec2-user/ansible-dev/Ansible-project') {
-                    sh 'ansible-playbook installingstuff.yml'
+                    sh 'ansible-playbook qa.yml'
                 }
             }
-        }
+        }/* 
         stage('Deploy application') {
             steps {
                 dir('/home/ec2-user/pqa-stuff') {
                     sh 'ansible-playbook javaapp.yml'
                 }
             }
-        }
+        }*/
     }
 }

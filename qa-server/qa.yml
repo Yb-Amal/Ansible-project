@@ -27,7 +27,7 @@
         - docker
         - unzip
       when: ansible_os_family == 'Debian'
-- name: Install Java 11 on RedHat
+    - name: Install Java 11 on RedHat
       yum:
         name: "java-11*"
         state: present
