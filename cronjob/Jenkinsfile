@@ -1,0 +1,13 @@
+pipeline {
+    agent{
+        label 'ansible label'
+    }
+    triggers{
+        cron('0 0 1 * *')
+    }
+    stages( run a cron every month)
+        steps{
+            dir('/home/ec2-user/ansible-dev/Ansible-project/cronjob')
+                sh 'ansible-playbook cornjob.yml'
+        }
+}
