@@ -26,17 +26,19 @@ pipeline {
                                     verbose: false)])
             }
         }
-        stage('send file to jfrog'){
+        stage('zip the file'){
             steps {
-                sh '''
-                    zip zipfile456.zip *
-                    curl -uAdmin:AP7PiztS2DAyLrs79WGQQ6Jo5Ms -T zipfile456.zip "http://184.72.197.16:8081/artifactory/yml.file/"
-                '''
+                sh 'zip ansible-${BUILD_ID}.zip * -- exclude Jenkinsfile'
+                
 
                     
                     
             }
     }
+    stage('upload artifacts to jfrog')
+        steps{
+            sh 'curl -uAdmin:AP7PiztS2DAyLrs79WGQQ6Jo5Ms -T zipfile456.zip "http://3.90.153.78:8081//artifactory/yml.file/"'
+        }
 }
 
 
