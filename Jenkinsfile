@@ -17,7 +17,7 @@ pipeline {
                                     makeEmptyDirs: false, 
                                     noDefaultExcludes: false, 
                                     patternSeparator: '[, ]+', 
-                                    remoteDirectory: '/home/ec2-user/ansible-dev/Ansible-project', 
+                                    remoteDirectory: '.', 
                                     remoteDirectorySDF: false, 
                                     removePrefix: '', 
                                     sourceFiles: '**/*.yml,**/*.cfg')], 
