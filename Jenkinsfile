@@ -37,7 +37,7 @@ pipeline {
     }
     stage('upload artifacts to jfrog'){
         steps{
-            sh 'curl -u<USERNAME>:<PASSWORD> -T ansible-${BUILD_ID}.zip "http://3.90.153.78:8081/artifactory/ansible/ansible-${BUILD_ID}.zip"'
+            sh 'curl -uAdmin:AP7PiztS2DAyLrs79WGQQ6Jo5Ms -T ansible-${BUILD_ID}.zip "http://3.90.153.78:8081/artifactory/ansible/ansible-${BUILD_ID}.zip"'
         }
     }
         
