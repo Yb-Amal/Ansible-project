@@ -17,7 +17,7 @@ pipeline {
                                     makeEmptyDirs: false, 
                                     noDefaultExcludes: false, 
                                     patternSeparator: '[, ]+', 
-                                    remoteDirectory: '/home/ec2-user/ansible-dev/Ansible-project', 
+                                    remoteDirectory: '', 
                                     remoteDirectorySDF: false, 
                                     removePrefix: '', 
                                     sourceFiles: '**/*.yml,**/*.cfg')], 
@@ -37,7 +37,7 @@ pipeline {
     }
     stage('upload artifacts to jfrog'){
         steps{
-            sh 'curl -uadmin:AP7PiztS2DAyLrs79WGQQ6Jo5Ms -T pw.zip "http://3.90.153.78:8081/artifactory/ansible/ansible-${BUILD_ID}.zip"'
+            sh 'curl -uadmin:AP7PiztS2DAyLrs79WGQQ6Jo5Ms -T ansible-${BUILD_ID}.zip"http://3.90.153.78:8081/artifactory/ansible/ansible-${BUILD_ID}.zip"'
         }
     }
         
