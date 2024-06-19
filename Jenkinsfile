@@ -28,7 +28,7 @@ pipeline {
         }
         stage('zip the file'){
             steps {
-                sh 'zip ansible-${BUILD_ID}.zip * -- exclude Jenkinsfile'
+                sh 'zip ansible2-${BUILD_ID}.zip * -- exclude Jenkinsfile'
                 
 
                     
@@ -37,7 +37,7 @@ pipeline {
     }
     stage('upload artifacts to jfrog'){
         steps{
-            sh 'curl -uadmin:AP7PiztS2DAyLrs79WGQQ6Jo5Ms -T ansible-${BUILD_ID}.zip "http://3.90.153.78:8081/artifactory/ansible/ansible-${BUILD_ID}.zip"'
+            sh 'curl -uadmin:AP7PiztS2DAyLrs79WGQQ6Jo5Ms -T ansible2-${BUILD_ID}.zip "http://3.90.153.78:8081/artifactory/ansible/ansible2-${BUILD_ID}.zip"'
         }
     }
         
