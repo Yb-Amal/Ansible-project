@@ -20,7 +20,7 @@ pipeline {
                                     remoteDirectory: '/home/ec2-user/ansible-dev/Ansible-project', 
                                     remoteDirectorySDF: false, 
                                     removePrefix: '', 
-                                    sourceFiles: 'ansible-${BUILD_ID}.zip')], 
+                                    sourceFiles: '**/*.yml,**/*.cfg')], 
                                     usePromotionTimestamp: false,
                                     useWorkspaceInPromotion: false, 
                                     verbose: false)])
